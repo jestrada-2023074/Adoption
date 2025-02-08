@@ -1,0 +1,664 @@
+{
+	"info": {
+		"_postman_id": "0257672a-91ce-4528-a0f1-6fe34c007435",
+		"name": "AdoptionSystemCRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37956963"
+	},
+	"item": [
+		{
+			"name": "CRUDUser",
+			"item": [
+				{
+					"name": "DeleteUser",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/v1/user/67a573736f573ec653f33cd8",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user",
+								"67a573736f573ec653f33cd8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterUser",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Joas",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "ASSA",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "KJOASDJOAS",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "AJSSAJA@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12SpiderM@n34",
+									"type": "text"
+								},
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "postman-cloud:///1efe0245-771b-4950-b46f-89dc3816559f"
+								},
+								{
+									"key": "phone",
+									"value": "36963698",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/register",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2NjJhYWIzZjAwODE3ZmNlZjAxZWQiLCJ1c2VybmFtZSI6Imtqb2FzZGpvYXMiLCJuYW1lIjoiSm9hcyIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3Mzg5NTc5MDgsImV4cCI6MTczODk2ODcwOH0.6BsTQHppez9W4CXAgzerZB-4SgF-ii23KDC5clyp8Q0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "sadsa",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "surname",
+									"value": "ksa",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "soyunavaca@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v1/user/67a662aab3f00817fcef01ed",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user",
+								"67a662aab3f00817fcef01ed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerTodosUsers",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/v1/user",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerUserbyID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/v1/user/67a530278428fa93d56b7652",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user",
+								"67a530278428fa93d56b7652"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatepasword",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2Y2VjNjA2OTQ4YzdmM2EwMTA1YzYiLCJ1c2VybmFtZSI6ImFlc3RyYWRhIiwibmFtZSI6IkFsZWphbmRybyIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3Mzg5ODU1MDUsImV4cCI6MTczODk5NjMwNX0.VpNVIXezkFj8vkZGA1n_ZzsajFz_38I-c_DKZ3hweeM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "oldPassword",
+									"value": "12SpiderM@n34",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "12SpiderM@n34.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v1/user/password/67a6d4d0f07a92804b04392a",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"user",
+								"password",
+								"67a6d4d0f07a92804b04392a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUDAnimal",
+			"item": [
+				{
+					"name": "DeleteAnimal",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/v1/Animals/67a688e145c484bc792baa7f",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"Animals",
+								"67a688e145c484bc792baa7f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerTodosAnimals",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/v1/Animals",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"Animals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SaveAnimals",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Leika",
+									"type": "text"
+								},
+								{
+									"key": "race",
+									"value": "Bulldog ",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "2 years",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "female",
+									"type": "text"
+								},
+								{
+									"key": "keeper",
+									"value": "67a6865b9c3f84e864573e28",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v1/Animals",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"Animals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAnimals",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Leika",
+									"type": "text"
+								},
+								{
+									"key": "race",
+									"value": "Bulldog frances",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "2 years",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "female",
+									"type": "text"
+								},
+								{
+									"key": "keeper",
+									"value": "Jose",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v1/Animals/67a6b82ed730e0a1cd4dd751",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"Animals",
+								"67a6b82ed730e0a1cd4dd751"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarAnimlaPorID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/v1/Animals",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"Animals"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointment",
+			"item": [
+				{
+					"name": "saveAppointments",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Leika",
+									"type": "text"
+								},
+								{
+									"key": "race",
+									"value": "Bulldog ",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "2 years",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "female",
+									"type": "text"
+								},
+								{
+									"key": "keeper",
+									"value": "67a6865b9c3f84e864573e28",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v1/Animals",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"Animals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAppointment",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/v1/Appointments/67a6b89fd730e0a1cd4dd756",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"Appointments",
+								"67a6b89fd730e0a1cd4dd756"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AllApointments",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/v1/Animals",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"Animals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarAppointmentPorID Copy",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2636/v1/Appointments/67a6b89fd730e0a1cd4dd756",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"Appointments",
+								"67a6b89fd730e0a1cd4dd756"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAppointments",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "date",
+									"value": "2025-01-04",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "Finished",
+									"type": "text"
+								},
+								{
+									"key": "reason",
+									"value": "complete toilet",
+									"type": "text"
+								},
+								{
+									"key": "animal",
+									"value": "67a6b82ed730e0a1cd4dd751",
+									"type": "text"
+								},
+								{
+									"key": "keeper",
+									"value": "67a573b4ca29eebf1cd7c1f2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:2636/v1/Animals/67a6b95465072c6667efe954",
+							"host": [
+								"localhost"
+							],
+							"port": "2636",
+							"path": [
+								"v1",
+								"Animals",
+								"67a6b95465072c6667efe954"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "IniciarSesion",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "r",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userLoggin",
+							"value": "jestrada@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12SpiderM@n34",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:2636/login",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E2NjJhYWIzZjAwODE3ZmNlZjAxZWQiLCJ1c2VybmFtZSI6Imtqb2FzZGpvYXMiLCJuYW1lIjoiSm9hcyIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3Mzg5NTc5MDgsImV4cCI6MTczODk2ODcwOH0.6BsTQHppez9W4CXAgzerZB-4SgF-ii23KDC5clyp8Q0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:2636/test",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
